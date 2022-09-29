@@ -1,6 +1,5 @@
 //CommonJS - importar e exportar módulos
 const os = require('os');
-const { setInterval } = require('timers/promises');
 
 const totalMem = parseInt(os.totalmem() / 1024 / 1024);
 const freeMem = parseInt(os.freemem() / 1024 / 1024);
@@ -15,7 +14,7 @@ setInterval(() => {
 
     console.clear();
     console.table(memoria);
-})
+}, 1000)
 
 //console.log(`Memória Livre: ${freeMem}`, `Total de Memória: ${totalMem}`)
 
