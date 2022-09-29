@@ -1,15 +1,18 @@
 //CommonJS - importar e exportar módulos
 const os = require('os')
+const { setInterval } = require('timers/promises')
 
 
+setInterval()
+const totalMem = parseInt(os.totalmem() / 1024 / 1024)
+const freeMem = parseInt(os.freemem() / 1024 / 1024)
+const percent = parseInt((freeMem / totalMem) * 100)
 
-//const totalMem = parseInt(os.totalmem() / 1024 / 1024)
-//const freeMem = parseInt(os.freemem() / 1024 / 1024)
 
-
-const memeoria = {
+const memoria = {
     total: `${totalMem} MB`,
-    free: `${freeMem} MB`
+    free: `${freeMem} MB`,
+    percent: `${percent} %`
 }
 
 console.clear()
